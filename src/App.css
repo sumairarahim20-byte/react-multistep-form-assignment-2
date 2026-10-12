@@ -1,0 +1,366 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0a0b10, #1a1c24);
+  color: #ffffff;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 16px;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 650px;
+  padding: 40px;
+  background: rgba(22, 25, 35, 0.75);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+}
+
+.eyebrow {
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 34px;
+}
+
+.subtitle,
+.section-description {
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 30px;
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.progress-track {
+  height: 5px;
+  margin: 12px 0 30px;
+  background: #30323b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, #d4af37, #ffd700);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 14px 15px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #3a3d48;
+  border-radius: 9px;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+input::placeholder {
+  color: #777d8b;
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, #d4af37, #ffd700);
+  color: #111111;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+@media (max-width: 560px) {
+  .form-card {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  flex: 1;
+}
+
+button.previous-button {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #555866;
+}
+
+button.previous-button:hover {
+  border-color: #d4af37;
+}
+
+.error-message {
+  display: block;
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: -6px;
+}
+.plan-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.plan-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px 12px;
+  border: 1px solid #3a3d48;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.plan-card:has(input:checked) {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.plan-card input,
+.terms-label input {
+  width: auto;
+  accent-color: #d4af37;
+  margin-top: 3px;
+}
+
+.plan-content {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.plan-content span {
+  color: #9ca3af;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.plan-content strong:last-child {
+  color: #d4af37;
+  font-size: 13px;
+}
+
+.terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 25px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .plan-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Review Screen Styling */
+.review-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #343642;
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.review-section h3 {
+  color: #d4af37;
+  font-size: 16px;
+  margin: 0 0 14px;
+}
+
+.review-section p {
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.review-section p strong {
+  color: #ffffff;
+}
+
+.review-section .previous-button {
+  margin-top: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+@media (max-width: 560px) {
+  .review-section {
+    padding: 14px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}
+
+/* Smooth UI Animations */
+
+.form-card {
+  animation: cardEntrance 0.65s ease-out both;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate step content */
+.form-card h2,
+.form-card .section-description,
+.form-card form,
+.form-card .plan-options,
+.form-card .terms-label,
+.form-card .review-section {
+  animation: contentEntrance 0.35s ease-out both;
+}
+
+@keyframes contentEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth progress bar */
+.progress-fill {
+  transition: width 0.4s ease-in-out;
+}
+
+/* Better input focus effect */
+.form-card input:not([type="radio"]):not([type="checkbox"]) {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-card input:not([type="radio"]):not([type="checkbox"]):focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+  outline: none;
+}
+
+/* Button hover animation */
+.form-card button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-card button:hover {
+  transform: translateY(-2px);
+}
+
+.form-card button:active {
+  transform: translateY(0);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .form-card,
+  .form-card h2,
+  .form-card .section-description,
+  .form-card form,
+  .form-card .plan-options,
+  .form-card .terms-label,
+  .form-card .review-section {
+    animation: none;
+  }
+
+  .progress-fill,
+  .form-card button,
+  .form-card input {
+    transition: none;
+  }
+}
